@@ -6,7 +6,40 @@
              xmlns:local="clr-namespace:ExamTwoQuestions.PointOfSale"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
-        <TextBlock>Customize Cobbler</TextBlock>
-    </Grid>
+    <StackPanel>
+        <TextBlock FontSize="40">Cobbler Customization</TextBlock>
+        <StackPanel Orientation="Horizontal">
+            <CheckBox IsChecked="{Binding Path=WithIceCream}">
+                <CheckBox.LayoutTransform>
+                    <ScaleTransform ScaleX="3" ScaleY="3" />
+                </CheckBox.LayoutTransform>
+            </CheckBox>
+            <TextBlock FontSize="30" Text="Served with Ice Cream"></TextBlock>
+        </StackPanel>
+
+        <StackPanel>
+            <TextBlock FontSize="40" Text="Cobbler Filling:"  Margin="5" />
+            <RadioButton x:Name="TopButton" Margin="5" IsChecked="{Binding Path=FruitPeach}"
+     GroupName="First Group" Content="Peach">
+                <RadioButton.LayoutTransform>
+                    <ScaleTransform ScaleX="3" ScaleY="3" />
+                </RadioButton.LayoutTransform>
+            </RadioButton>
+
+            <RadioButton x:Name="MiddleButton" Margin="5" IsChecked="{Binding Path=FruitCherry}"
+     GroupName="First Group" Content="Cherry">
+                <RadioButton.LayoutTransform>
+                    <ScaleTransform ScaleX="3" ScaleY="3" />
+                </RadioButton.LayoutTransform>
+            </RadioButton>
+
+            <RadioButton x:Name="LowerButton" Margin="5" IsChecked="{Binding Path=FruitBlueBerry}"
+     GroupName="First Group" Content="BlueBerry">
+                <RadioButton.LayoutTransform>
+                    <ScaleTransform ScaleX="3" ScaleY="3" />
+                </RadioButton.LayoutTransform>
+            </RadioButton>
+        </StackPanel>
+
+    </StackPanel>
 </UserControl>
